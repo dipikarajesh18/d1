@@ -14,5 +14,13 @@ let counter = 0;
 
 mainButton.addEventListener("click", (_) => {
   counter += 1;
-  counterDiv.innerHTML = counter.toString();
+  counterDiv.innerHTML = `${counter} cookies`;
 });
+
+setInterval(myCallback, 1000);
+
+function myCallback() {
+  counter += 1;
+  counterDiv.innerHTML = `${counter} cookies`;
+  console.log(counter);
+}
